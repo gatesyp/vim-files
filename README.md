@@ -10,9 +10,12 @@ Notes:
 - https://github.com/Shougo/vimproc.vim/blob/master/README.mkd
 - https://github.com/suan/vim-instant-markdown/
 - https://github.com/Shougo/neocomplete.vim
+
+
 #TODO
  - Re-organize
  - move to pathogen?
+ - Can you see this change steve?
 
 #First-Time Commands
 ```
