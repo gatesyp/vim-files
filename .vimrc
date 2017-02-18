@@ -83,6 +83,11 @@ map <C-0> :tablast<CR>
 
 "----------------------------------------Plugins----------------------------------------
 
+" on write, run flak8
+let g:PyFlakeOnWrite = 1
+let g:PyFlakeCheckers = 'pep8,mccabe,frosted'
+let g:PyFlakeDefaultComplexity=10
+let g:PyFlakeMaxLineLength = 100
 
 
 "----------------------------------------Syntastic----------------------------------------

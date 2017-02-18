@@ -15,6 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'fatih/vim-go'
+Plugin 'andviro/flake8-vim'
 
 
 " All of your Plugins must be added before the following line
