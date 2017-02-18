@@ -1,20 +1,22 @@
 #!/bin/bash
-# sets up vim and configures it 
+
+# Sets up vim and configures it. 
 clear
 
-echo "Setting up vim"
+echo "Setting up vim. "
 
 sudo apt-get install vim
 cp -r .vim ~/
 cp .vimrc ~/
-# copy the file which will update github to reflect changes
+
+# Copy the file which will update github to reflect changes. 
 cp update-vim-repo.sh ~/
 
-# install package manager
+# Install package manager. 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-echo "installing plugins"
+echo "Installing plugins. "
 
 vim +PluginInstall +qall
 
-echo "all finished"
+echo "All finished. "
