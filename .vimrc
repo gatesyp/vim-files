@@ -4,16 +4,16 @@
 
 " SURROUNDING TEXT
 
-" changes the surrounding from ' to double quote
+" Changes the surrounding from ' to double quote. 
 " cs ' "
 
-" deletes the surrounding '
+" Deletes the surrounding '.
 " cd '
 
-" changes the surrounding tag to strong
+" Changes the surrounding tag to strong.
 " cst <strong> 
 
-" creates a new surrounding tag
+" Creates a new surrounding tag.
 " S <tag>
 
 set nocompatible
@@ -35,10 +35,10 @@ augroup END
 filetype plugin indent on
 let mapleader = ','
 
-" activates line numbers
+" Activates line numbers. 
 set number
 
-" no error bells
+" No error bells. 
 set noerrorbells visualbell t_vb=        
 
 " -------------------------------------------------------------
@@ -51,7 +51,7 @@ set ruler
 " Show initial characters of pending incomplete command.
 set showcmd
 
-" set linespacings for gui vim
+" Set linespacings for gui vim. 
 set linespace=15                         
 set t_Co=256
 set guioptions-=e
@@ -83,16 +83,16 @@ nmap <C-H> <C-W><C-H>
 " Mappings
 " -------------------------------------------------------------
 
-" make it easy to edit Vimrc file
+" Edit .vimrc file. 
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
-" make it easy to edit plugins
+" Edit plugins. 
 nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 
-" add simple highlight removal
+" Simple highlight removal. 
 nmap <Leader><space> :nohlsearch<cr>
 
-" ctl + num to switch between tabs
+" Ctl + Num to switch between tabs. 
 map <C-S-]> gt
 map <C-S-[> gT
 map <C-1> 1gt
@@ -106,7 +106,7 @@ map <C-8> 8gt
 map <C-9> 9gt
 map <C-0> :tablast<CR>
 
-" enter normal mode with jk
+" Enter normal mode with jk. 
 :imap jk <Esc>
 
 " -------------------------------------------------------------
@@ -145,19 +145,19 @@ set listchars=trail:·,nbsp:·,extends:>,precedes:<,eol:$
 " Plugins
 " -------------------------------------------------------------
 
-" on write, run flak8
+" On write, run flak8. 
 let g:PyFlakeOnWrite = 1
 let g:PyFlakeCheckers = 'pep8,mccabe,frosted'
 let g:PyFlakeDefaultComplexity=10
 
-" this is the default line length
+" This is the default line length. 
 let g:PyFlakeMaxLineLength = 79
 
 " -------------------------------------------------------------
 " Syntastic
 " -------------------------------------------------------------
 
-" turn off warnings
+" Turn off warnings. 
 " set statusline+=%#warningmsg#				
 
 set statusline+=%{SyntasticStatuslineFlag()}
