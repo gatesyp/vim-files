@@ -87,7 +87,7 @@ map <C-0> :tablast<CR>
 let g:PyFlakeOnWrite = 1
 let g:PyFlakeCheckers = 'pep8,mccabe,frosted'
 let g:PyFlakeDefaultComplexity=10
-let g:PyFlakeMaxLineLength = 100
+let g:PyFlakeMaxLineLength = 79
 
 
 "----------------------------------------Syntastic----------------------------------------
