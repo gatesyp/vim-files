@@ -5,6 +5,6 @@ cp ~/.vimrc ~/GitHub/settings
 cp  ~/.vim/plugins.vim ~/GitHub/settings/.vim
 
 # commit and push my changes
-cd ~/GitHub/settings
+cd ~/GitHub/vim-files
 git commit . -m "updated vim config files"
 git push
