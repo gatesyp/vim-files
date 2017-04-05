@@ -35,11 +35,40 @@ augroup END
 filetype plugin indent on
 let mapleader = ','
 
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Don't create backup files. 
+set nobackup
+
 " Activates line numbers. 
 set number
 
+" Write the content of file automatically if you call :make. Used for vim-go. 
+set autowrite
+
+" Show current mode with airline or lightline
+set noshowmode
+
+" Search case sensitive
+set ignorecase
+
+" Not case sensitive if starts with capital letter
+set smartcase
 " No error bells. 
 set noerrorbells visualbell t_vb=        
+
+" Never use swap files
+set noswapfile
+
+" Enable to copy to clipboard for operations like yank, delete, change and put
+" http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
+if has('unnamedplus')
+  set clipboard^=unnamed
+  set clipboard^=unnamedplus
+endif
 
 " -------------------------------------------------------------
 " Display Settings
@@ -108,6 +137,40 @@ map <C-0> :tablast<CR>
 
 " Enter normal mode with jk. 
 :imap jk <Esc>
+
+" Make it easier to cycle between errors in the quickfix window. 
+map <C-m> :cnext<CR>
+map <C-n> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" Build a Go program, based on if its a test or main file. 
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#cmd#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+" Run a Go program. 
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+" Auto format import statements for Go
+let g:go_fmt_command = "goimports"
+
+" Use only quickfix for Go, rather than location lists and quickfix. 
+let g:go_list_type = "quickfix"
+
+" Change default timeout for go test
+" let g:go_test_timeout = '10s'
+
+" Run tests Go tests easier
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+" Toggle GoCoverage quickly
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " -------------------------------------------------------------
 " Setup wrapping for long lines
