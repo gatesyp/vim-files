@@ -20,5 +20,7 @@ brew install vim --with-python3
 echo "Installing plugins. "
 
 vim +PluginInstall +qall
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
 
 echo "All finished. "
