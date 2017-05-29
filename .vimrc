@@ -220,6 +220,14 @@ set expandtab
 " -------------------------------------------------------------
 " Plugins
 " -------------------------------------------------------------
+" Don't use vim-jedi autocomplete.
+let g:jedi#completions_enabled = 0
+
+" Enable autoclosing of preview pane when completion string is accepted. 
+let g:ycm_autoclose_preview_window_after_completion=1
+" Map Jedi's jump to definition/declaration to ,g .
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 
 " -------------------------------------------------------------
 " Syntastic
