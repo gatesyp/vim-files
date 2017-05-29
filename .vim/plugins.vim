@@ -16,7 +16,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'fatih/vim-go'
-Plugin 'andviro/flake8-vim'
+Plugin 'davidhalter/jedi-vim'
 
 " Plugins must be added before the following line. 
 call vundle#end()
