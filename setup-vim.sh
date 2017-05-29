@@ -15,6 +15,8 @@ cp push-vim-upsteam.sh ~/
 # Install package manager. 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+brew install vim --with-python3
+
 echo "Installing plugins. "
 
 vim +PluginInstall +qall
