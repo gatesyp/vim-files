@@ -221,14 +221,6 @@ set expandtab
 " Plugins
 " -------------------------------------------------------------
 
-" On write, run flak8. 
-let g:PyFlakeOnWrite = 1
-let g:PyFlakeCheckers = 'pep8,mccabe,frosted'
-let g:PyFlakeDefaultComplexity=10
-
-" This is the default line length. 
-let g:PyFlakeMaxLineLength = 79
-
 " -------------------------------------------------------------
 " Syntastic
 " -------------------------------------------------------------
